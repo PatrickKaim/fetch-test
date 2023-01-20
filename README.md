@@ -19,10 +19,13 @@ This is a simple example of how to use Vue3 with Meteor.
 - [Tailwind CSS](https://tailwindcss.com/)
 
 
-## Reproduce the error
-1. Run `meteor add fetch`
-2. Edit /imports/api/links.js
+## Reproduce the error in a new project
+1. Run `meteor create fetch-test --vue`
+2. cd into fetch-test
+3. Run `meteor npm install`
+4. Run `meteor add fetch`
+5. Edit /imports/api/links.js
     Add `import {fetch, Headers} from 'meteor/fetch'` on top of the document
-    Add `const header = new Headers();` inside the Meteor.publish()
+    Add `const header = new Headers();` inside Meteor.publish()
     (it doesn't matter where you place the line just make sure it will run)
-3. Run `meteor`
+6. Run `meteor`
